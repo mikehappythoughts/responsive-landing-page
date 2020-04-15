@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ghost Recon Breakpoint landing page" />
+    <meta
+      name="keywords"
+      content="Ghost Recon, classes, breakpoint, Ghost Recon Breakpoint, gear level"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("styles.css");
+    </style>
+    <title>Ghost Recon Breakpoint concept site</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_wrapper">
+        <a
+          role="button"
+          aria-label="Skip to content"
+          href="#content"
+          class="skip_to_content"
+          >skip to content</a
+        >
+        <img
+          class="header_logo"
+          src="images/logo.png"
+          alt="Ghost Recon Breakpoint"
+        />
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main_hero">
+        <h1 class="main_title">Have you got what it takes?</h1>
+      </section>
+
+      <section class="main_content" id="content">
+        <p class="main_intro">
+          Tom Clancy’s Ghost Recon Breakpoint is a military open world shooter.
+          You can play in co-op or solo if you prefer. In Ghost Recon Breakpoint
+          you face off against ex-ghosts, but the environment is your enemy as
+          well. Your mission is to defeat your ex-ghosts and be the only man /
+          woman standing.
+        </p>
+        <figure class="main_item">
+          <h2 class="main_item_titles">
+            Classes
+          </h2>
+          <img
+            class="main_item_image"
+            src="images/classes.jpg"
+            alt="Ghost recon breakoint classes"
+          />
+          <figcaption class="main_item_text">
+            Classes are a new addition to the Ghost Recon game system. Each
+            class comes with a special ability which the player can activate by
+            pressing L1 + R1 together on the controller. Each class has a rank
+            system from 1 to 10. For certain completed tasks you will receive
+            special rewards. When you have completed all the ranks you will be
+            rewarded with a special weapon for that class.
+            <button
+              role="button"
+              aria-label="Find out more"
+              class="main_item_button"
+            >
+              Find out more
+            </button>
+          </figcaption>
+        </figure>
+
+        <figure class="main_item">
+          <h2 class="main_item_titles">
+            Gear level
+          </h2>
+          <img
+            class="main_item_image lazyload"
+            data-src="images/gear_level.jpg"
+            loading="lazy"
+            alt="Ghost recon breakoint gear level"
+          />
+          <figcaption class="main_item_text">
+            Gear level to put it simply is based on the gear level of your
+            clothes and weapons. Your gear level is important as the enemies
+            have gear levels. If your gear level is lower than the enemies then
+            it will be a hard battle. But not impossible to complete. But if
+            your gear level is higher than the enemies then it will be a lot
+            easier to defeat the enemies. Scattered around the world are items
+            which will increase your level. Just equip the weapon and clothes to
+            increase your gear level.
+            <button
+              role="button"
+              aria-label="Find out more"
+              class="main_item_button"
+            >
+              Find out more
+            </button>
+          </figcaption>
+        </figure>
+        <figure class="main_item">
+          <h2 class="main_item_titles">
+            Weapons
+          </h2>
+          <img
+            class="main_item_image lazyload"
+            data-src="images/weapon.jpg"
+            loading="lazy"
+            alt="Ghost recon breakoint weapons"
+          />
+          <figcaption class="main_item_text">
+            Weapons are scattered throughout the world. They are located in
+            boxes, dropped by dead enemies, created using blueprints or given as
+            rewards. All weapons come with unique perks so read the perks very
+            carefully.
+            <button
+              role="button"
+              aria-label="Find out more"
+              class="main_item_button"
+            >
+              Find out more
+            </button>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer_wrapper">
+        <img src="images/pegi_18.png" alt="pegi 18" />
+        <img src="images/ubisoft-white.png" alt="Ubisoft logo" />
+        <img src="images/uplay.png" alt="Uplay logo" />
+        <!-- <p>
+          &copy; &nbsp;&nbsp;Free Brushes by<a
+            target="_blank"
+            href="https://www.brusheezy.com"
+            >Brusheezy!</a
+          >
+        </p> -->
+      </div>
+    </footer>
+    <script>
+      // lazy load images
+      if ("loading" in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+          img.src = img.dataset.src;
+        });
+      } else {
+        // Dynamically import the LazySizes library
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+/* Typography imported from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+
+body {
+  line-height: 1;
+  background-color: rgb(116, 113, 113);
+  background: url("images/bkg.jpg") center center;
+  color: #fff;
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+/* vars */
+$maxWidth: 1024px;
+$headerH: 100px;
+$gutter: 0.5rem;
+$panelColor: rgba(13, 15, 17, 0.8);
+$fontFamily: "Exo", sans-serif;
+$outline: 2px solid rgb(250, 246, 4);
+$secondary: rgb(236, 135, 18);
+
+.skip_to_content {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+}
+
+.skip_to_content:focus {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: $secondary;
+  color: #000;
+  padding: 1rem 1rem;
+  outline: $outline;
+}
+/* header */
+.header {
+  background-color: #000;
+  padding: 0 $gutter;
+
+  &_wrapper {
+    position: relative;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    height: $headerH;
+    padding: $gutter 0;
+    text-align: center;
+  }
+  &_logo {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* main */
+.main {
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  &_content {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+
+  &_hero {
+    background: url("images/hero.jpeg") center center;
+    background-size: cover;
+    height: 250px;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: end;
+  }
+  &_title {
+    text-transform: uppercase;
+    font-family: $fontFamily;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    line-height: 1;
+    padding: 1.5rem 1rem 1rem 4.5rem;
+    background-color: $panelColor;
+    background: url("images/title_bkg.png") left center no-repeat;
+    width: auto;
+    margin: 0;
+  }
+
+  &_intro {
+    padding: calc(#{$gutter} * 2);
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: $gutter 0 $gutter;
+    background-color: $panelColor;
+  }
+}
+
+.main_item {
+  position: relative;
+  margin: 0 $gutter 4rem $gutter;
+
+  &_titles {
+    font-size: 1.5rem;
+    font-family: $fontFamily;
+    background-color: $panelColor;
+    line-height: 1.2;
+    padding: $gutter;
+    text-transform: uppercase;
+    border-left: 10px solid $secondary;
+    border-bottom: 1px solid $secondary;
+    margin-bottom: 0;
+  }
+
+  &_text {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background-color: $panelColor;
+    padding: 1rem;
+    border-left: 5px solid rgb(75, 82, 87);
+  }
+
+  &_image {
+    display: block;
+    max-width: 769px;
+    width: 100%;
+  }
+
+  &_button {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.6rem;
+    left: 0;
+    bottom: -43px;
+    margin-top: 0;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: $secondary;
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+}
+
+/* footer */
+.footer {
+  width: auto;
+  background-color: #000;
+  padding: 0.75rem;
+  color: white;
+  text-align: center;
+  font-size: 0.75rem;
+  border-top: 1px solid $secondary;
+
+  &_wrapper {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .main_title {
+    font-size: 2.1rem;
+  }
+  .main_item {
+    margin: 2rem 2rem 3rem;
+
+    &_titles {
+      background-color: $panelColor;
+    }
+
+    &_text {
+      background-color: $panelColor;
+    }
+
+    &_image {
+      max-width: 600px;
+    }
+  }
+
+  .main_item {
+    &_titles {
+      position: absolute;
+      top: 20px;
+      right: 5%;
+      width: 41%;
+    }
+
+    &_text {
+      position: absolute;
+      top: 85px;
+      right: $gutter;
+      width: 41%;
+    }
+
+    &_button {
+      left: -5px;
+    }
+  }
+}
