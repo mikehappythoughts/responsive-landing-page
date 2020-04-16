@@ -1,6 +1,14 @@
-/* Typography imported from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+/**
+ * Fix fonts that render as bold in Firefox
+ *
+ * Put this near the top of your style.css
+ * Before any overriding styles
+ */
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
 
 body {
   line-height: 1;
@@ -9,10 +17,15 @@ body {
   color: #fff;
   height: 100vh;
   font-family: "Roboto Condensed", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
+  font-style: italic;
   font-weight: normal;
   padding: 0;
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Generic styles */
@@ -73,7 +86,8 @@ $secondary: rgb(236, 135, 18);
     position: relative;
     margin-bottom: 3rem;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    // auto;
     gap: calc(#{$gutter} * 2);
   }
 
@@ -115,6 +129,8 @@ $secondary: rgb(236, 135, 18);
   &_titles {
     font-size: 1.5rem;
     font-family: $fontFamily;
+    font-weight: 900;
+    font-style: italic;
     background-color: $panelColor;
     line-height: 1.2;
     padding: $gutter;
@@ -182,28 +198,15 @@ $secondary: rgb(236, 135, 18);
   .main_title {
     font-size: 2.1rem;
   }
+
   .main_item {
     margin: 1rem 1rem 0;
-
-    &_titles {
-      background-color: $panelColor;
-    }
-
-    &_text {
-      background-color: $panelColor;
-    }
-
-    &_image {
-      max-width: 600px;
-    }
-  }
-
-  .main_item {
     &_titles {
       position: absolute;
       top: 20px;
       right: 5%;
       width: 41%;
+      background-color: $panelColor;
     }
 
     &_text {
@@ -211,11 +214,16 @@ $secondary: rgb(236, 135, 18);
       top: 65px;
       right: $gutter;
       width: 41%;
+      background-color: $panelColor;
     }
 
     &_button {
       left: -5px;
       bottom: -43px;
+    }
+
+    &_image {
+      max-width: 600px;
     }
   }
 }
