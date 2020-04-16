@@ -9,14 +9,15 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap"
+      rel="preload"
+      href="styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap");
+    </style>
 
     <title>Ghost Recon Breakpoint concept site</title>
   </head>
@@ -51,7 +52,7 @@
       </p>
       <section class="main_content">
         <figure class="main_item">
-          <h2 class="main_item_titles">
+          <h2 class="main_item_titles main_item_titles--border-orange">
             Classes
           </h2>
           <img
@@ -69,7 +70,7 @@
             <button
               role="button"
               aria-label="Find out more"
-              class="main_item_button"
+              class="main_item_button main_item_button--orange"
             >
               Find out more
             </button>
@@ -77,7 +78,7 @@
         </figure>
 
         <figure class="main_item">
-          <h2 class="main_item_titles">
+          <h2 class="main_item_titles main_item_titles--border-orange">
             Gear level
           </h2>
           <img
@@ -98,14 +99,14 @@
             <button
               role="button"
               aria-label="Find out more"
-              class="main_item_button"
+              class="main_item_button main_item_button--orange"
             >
               Find out more
             </button>
           </figcaption>
         </figure>
         <figure class="main_item">
-          <h2 class="main_item_titles">
+          <h2 class="main_item_titles main_item_titles--border-orange">
             Weapons
           </h2>
           <img
@@ -122,7 +123,7 @@
             <button
               role="button"
               aria-label="Find out more"
-              class="main_item_button"
+              class="main_item_button main_item_button--orange"
             >
               Find out more
             </button>
@@ -135,13 +136,6 @@
         <img src="images/pegi_18.png" alt="pegi 18" />
         <img src="images/ubisoft-white.png" alt="Ubisoft logo" />
         <img src="images/uplay.png" alt="Uplay logo" />
-        <!-- <p>
-          &copy; &nbsp;&nbsp;Free Brushes by<a
-            target="_blank"
-            href="https://www.brusheezy.com"
-            >Brusheezy!</a
-          >
-        </p> -->
       </div>
     </footer>
     <script>
