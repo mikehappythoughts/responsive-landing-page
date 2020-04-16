@@ -19,6 +19,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 /* vars */
 $maxWidth: 1024px;
 $headerH: 100px;
@@ -43,6 +44,7 @@ $secondary: rgb(236, 135, 18);
   padding: 1rem 1rem;
   outline: $outline;
 }
+
 /* header */
 .header {
   background-color: #000;
@@ -181,7 +183,6 @@ $secondary: rgb(236, 135, 18);
     font-size: 2.1rem;
   }
   .main_item {
-    // margin: 2rem 2rem 3rem;
     margin: 1rem 1rem 0;
 
     &_titles {
