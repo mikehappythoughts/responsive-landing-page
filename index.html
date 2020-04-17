@@ -5,7 +5,7 @@
     <meta name="description" content="Ghost Recon Breakpoint landing page" />
     <meta
       name="keywords"
-      content="Ghost Recon, classes, breakpoint, Ghost Recon Breakpoint, gear level"
+      content="Ghost Recon, weapon, breakpoint, Ghost Recon Breakpoint, gear level"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -14,11 +14,6 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap");
-    </style>
-
     <title>Ghost Recon Breakpoint concept site</title>
   </head>
   <body>
@@ -55,11 +50,22 @@
           <h2 class="main_item_titles main_item_titles--border-orange">
             Classes
           </h2>
-          <img
-            class="main_item_image"
-            src="images/classes.jpg"
-            alt="Ghost recon breakoint classes"
-          />
+          <picture>
+            <source
+              media="(max-width: 400px)"
+              srcset="images/classes-400w.jpg"
+            />
+            <source
+              media="(max-width: 799px)"
+              srcset="images/classes-500w.jpg"
+            />
+            <source media="(min-width: 800px)" srcset="images/classes.jpg" />
+            <img
+              class="main_item_image"
+              src="images/classes.jpg"
+              alt="Ghost recon breakoint classes types"
+            />
+          </picture>
           <figcaption class="main_item_text">
             Classes are a new addition to the Ghost Recon game system. Each
             class comes with a special ability which the player can activate by
@@ -81,12 +87,22 @@
           <h2 class="main_item_titles main_item_titles--border-orange">
             Gear level
           </h2>
-          <img
-            class="main_item_image lazyload"
-            data-src="images/gear_level.jpg"
-            loading="lazy"
-            alt="Ghost recon breakoint gear level"
-          />
+          <picture>
+            <source
+              media="(max-width: 400px)"
+              srcset="images/gear_level-400w.jpg"
+            />
+            <source
+              media="(max-width: 799px)"
+              srcset="images/gear_level-500w.jpg"
+            />
+            <source media="(min-width: 800px)" srcset="images/gear_level.jpg" />
+            <img
+              class="main_item_image"
+              src="images/gear_level.jpg"
+              alt="Ghost recon breakoint gear level weapons and outfits"
+            />
+          </picture>
           <figcaption class="main_item_text">
             Gear level to put it simply is based on the gear level of your
             clothes and weapons. Your gear level is important as the enemies
@@ -109,12 +125,22 @@
           <h2 class="main_item_titles main_item_titles--border-orange">
             Weapons
           </h2>
-          <img
-            class="main_item_image lazyload"
-            data-src="images/weapon.jpg"
-            loading="lazy"
-            alt="Ghost recon breakoint weapons"
-          />
+          <picture>
+            <source
+              media="(max-width: 400px)"
+              srcset="images/weapon-400w.jpg"
+            />
+            <source
+              media="(max-width: 799px)"
+              srcset="images/weapon-500w.jpg"
+            />
+            <source media="(min-width: 800px)" srcset="images/weapon.jpg" />
+            <img
+              class="main_item_image"
+              src="images/weapon.jpg"
+              alt="Ghost recon breakpoint weapons upgrading"
+            />
+          </picture>
           <figcaption class="main_item_text">
             Weapons are scattered throughout the world. They are located in
             boxes, dropped by dead enemies, created using blueprints or given as
