@@ -8,12 +8,13 @@
       content="Ghost Recon, weapon, breakpoint, Ghost Recon Breakpoint, gear level"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="preload"
-      href="styles.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+    <style>
+      html {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+    <link href="styles.css" rel="preload stylesheet" as="style" />
     <title>Ghost Recon Breakpoint concept site</title>
   </head>
   <body>
@@ -38,6 +39,7 @@
       <section class="main_hero">
         <h1 class="main_title">Have you got what it takes?</h1>
       </section>
+      <!-- <h2 class="main_item_titles">Overview</h2> -->
       <p class="main_intro" id="content" tabindex="-1">
         Tom Clancy’s Ghost Recon Breakpoint is a military open world shooter.
         You can play in co-op or solo if you prefer. In Ghost Recon Breakpoint
