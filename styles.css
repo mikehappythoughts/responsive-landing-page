@@ -242,4 +242,9 @@ img {
     max-width: 600px;
   }
 }
+
+html {
+  visibility: visible;
+  opacity: 1;
+}
 /*# sourceMappingURL=styles.css.map */
