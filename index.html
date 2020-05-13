@@ -33,6 +33,16 @@
         margin: 0;
       }
     </style>
+    <script>
+      function handleFirstTab(e) {
+        if (e.keyCode === 9) {
+          // the "I am a keyboard user" key
+          document.body.classList.add("user-is-tabbing");
+          window.removeEventListener("keydown", handleFirstTab);
+        }
+      }
+      window.addEventListener("keydown", handleFirstTab);
+    </script>
     <link href="styles.css" rel="preload stylesheet" as="style" />
     <title>Ghost Recon Breakpoint concept site</title>
   </head>

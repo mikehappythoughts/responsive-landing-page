@@ -7,6 +7,14 @@
  * Before any overriding styles
  */
 /* Generic styles */
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) div:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 *,
 *::before,
 *::after {
@@ -23,6 +31,7 @@ img {
   position: absolute;
   top: -1000px;
   left: 0;
+  cursor: pointer;
 }
 
 .skip_to_content:focus {
@@ -32,7 +41,7 @@ img {
   background-color: #ec8712;
   color: #000;
   padding: 1rem 1rem;
-  outline: 2px solid #faf604;
+  outline: 2px solid #f8c565;
 }
 
 /* header */
@@ -163,14 +172,19 @@ img {
   width: 100px;
   height: 40px;
   border: none;
+  cursor: pointer;
 }
 
 .main_item_button--orange {
   background-color: #ec8712;
 }
 
+.main_item_button:hover {
+  background-color: #d47910;
+}
+
 .main_item_button:focus {
-  outline: 2px solid #faf604;
+  outline: 2px solid #f8c565;
 }
 
 /* footer */

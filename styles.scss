@@ -9,6 +9,15 @@
 
 /* Generic styles */
 
+// only show focus ring on tab button
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) div:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 *,
 *::before,
 *::after {
@@ -25,13 +34,15 @@ $headerH: 100px;
 $gutter: 0.5rem;
 $panelColor: rgba(13, 15, 17, 0.8);
 $fontFamily: "Exo", sans-serif;
-$outline: 2px solid rgb(250, 246, 4);
+$outline: 2px solid rgb(248, 197, 101);
 $secondary: rgb(236, 135, 18);
+$cursorPointer: pointer;
 
 .skip_to_content {
   position: absolute;
   top: -1000px;
   left: 0;
+  cursor: $cursorPointer;
 
   &:focus {
     position: absolute;
@@ -165,9 +176,14 @@ $secondary: rgb(236, 135, 18);
     width: 100px;
     height: 40px;
     border: none;
+    cursor: $cursorPointer;
 
     &--orange {
       background-color: $secondary;
+    }
+
+    &:hover {
+      background-color: darken($color: $secondary, $amount: 5%);
     }
 
     &:focus {
